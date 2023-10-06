@@ -5,38 +5,20 @@ import NotFound from './pages/NotFound';
 
 const routes: RouteObject[] = [
   {
-    path: "/",
+    path: '/',
     element: <Home />,
-    children: [],
+    children: []
   },
   {
-    path: "/following",
+    path: '/following',
     element: <Following />,
-    children: [],
+    children: []
   },
   {
-    path: "*",
+    path: '*',
     element: <NotFound />,
-    children: [],
-  },
+    children: []
+  }
 ];
 
 export default routes;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
