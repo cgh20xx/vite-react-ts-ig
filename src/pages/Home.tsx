@@ -1,4 +1,4 @@
-import IGHeader from '../components/IGHeader';
+import IGHeader from 'components/IGHeader';
 
 const Home: React.FC = () => {
   return (
