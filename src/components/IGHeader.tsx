@@ -4,8 +4,8 @@ const IGHeader: React.FC = () => {
   const navigate = useNavigate();
 
   return (
-    <header className="sticky top-0 bg-white border-b-[1px] border-gray-300">
-      <div className="flex justify-between items-center h-[60px] px-2 box-border lg:max-w-[1024px] lg:mx-auto lg:px-0">
+    <header className="sticky top-0 border-b-[1px] border-gray-300 bg-white">
+      <div className="box-border flex h-[60px] items-center justify-between px-2 lg:mx-auto lg:max-w-[1024px] lg:px-0">
         <img
           className="w-[100px] cursor-pointer"
           src="/images/logo.svg"
@@ -16,7 +16,7 @@ const IGHeader: React.FC = () => {
         <div className="flex items-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 mr-4 cursor-pointer"
+            className="mr-4 h-6 w-6 cursor-pointer"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -33,7 +33,7 @@ const IGHeader: React.FC = () => {
           </svg>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 mr-4 cursor-pointer"
+            className="mr-4 h-6 w-6 cursor-pointer"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -55,7 +55,7 @@ const IGHeader: React.FC = () => {
               d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
             />
           </svg>
-          <div className="h-6 w-6 rounded-full bg-gray-900 text-white font-bold flex justify-center items-center">
+          <div className="flex h-6 w-6 items-center justify-center rounded-full bg-gray-900 font-bold text-white">
             B
           </div>
         </div>
