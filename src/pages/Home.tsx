@@ -7,7 +7,12 @@ const Home: React.FC = () => {
     <>
       <IGHeader />
       <IGContainer>
-        <IGStory />
+        <div className="flex justify-between">
+          <div className="w-full lg:w-[600px]">
+            <IGStory />
+          </div>
+          <div className="hidden w-[424px] lg:block">IGProfile</div>
+        </div>
       </IGContainer>
     </>
   );
