@@ -59,7 +59,7 @@
   "stories": [
     {
       "id": 1,
-      "name": "bruce_fe",
+      "name": "hank_fe",
       "avatar": "/images/avatars/a1.png"
     },
     {
@@ -104,7 +104,7 @@
     },
     {
       "id": 10,
-      "name": "bruce_fe",
+      "name": "hank_fe",
       "avatar": "/images/avatars/a10.png"
     }
   ]

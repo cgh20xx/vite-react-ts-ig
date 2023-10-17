@@ -13,7 +13,7 @@ const Item: React.FC<ItemProps> = ({ name, avatar }) => {
           alt={name}
         />
       </div>
-      <p className="mt-1 text-xs">{name}</p>
+      <p className="mt-1 text-center text-xs">{name}</p>
     </div>
   );
 };
