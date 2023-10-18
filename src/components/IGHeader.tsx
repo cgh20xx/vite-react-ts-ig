@@ -5,7 +5,7 @@ const IGHeader: React.FC = () => {
 
   return (
     <header className="sticky top-0 border-b-[1px] border-gray-300 bg-white">
-      <div className="box-border flex h-[60px] items-center justify-between px-2 lg:mx-auto lg:max-w-[1024px] lg:px-0">
+      <div className="flex h-[60px] items-center justify-between px-2 lg:mx-auto lg:max-w-[1024px] lg:px-0">
         <img
           className="w-[100px] cursor-pointer"
           src="/images/logo.svg"

@@ -15,7 +15,7 @@ const Comment: React.FC<IGPostProps> = ({
 }) => {
   return (
     <div className="px-4">
-      <div className="mb-4 mt-4 box-border flex justify-between">
+      <div className="my-4 flex justify-between">
         <div className="flex">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -78,14 +78,14 @@ const Comment: React.FC<IGPostProps> = ({
       <p className="mb-2 text-sm font-bold">{likes} likes</p>
 
       <p className="text-sm">
-        <span className="mr-1 inline-block text-sm font-bold">{account}</span>
+        <span className="mr-1 text-sm font-bold">{account}</span>
         {description}
       </p>
       <p className="text-sm text-blue-900">{hashTags}</p>
       <p className="mt-2 text-xs font-[500] text-gray-400">
         View all 999 comments
       </p>
-      <p className="mt-1 text-[10px] text-gray-400">{createTime}</p>
+      <p className="mt-1 text-xs text-gray-400">{createTime}</p>
     </div>
   );
 };
