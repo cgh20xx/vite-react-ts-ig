@@ -17,10 +17,15 @@ const IGUser: React.FC<IGUserProps> = ({
   showFollow = false,
   isFollow = false
 }) => {
+  function followClickHandler() {
+    console.log('click follow');
+  }
   return (
     <div className="flex h-[40px] items-center px-4">
       <div
-        className="h-[40px] w-[40px] rounded-full"
+        className={`${
+          size === 'small' ? 'h-[40px] w-[40px]' : 'h-[60px] w-[60px]'
+        } rounded-full`}
         style={{
           backgroundImage: `url(${avatar})`,
           backgroundSize: 'cover',
@@ -31,9 +36,22 @@ const IGUser: React.FC<IGUserProps> = ({
         <p className="text-sm font-bold">{account}</p>
         <p className="text-xs text-gray-400">{location}</p>
       </div>
-      <p className="ml-auto cursor-pointer text-xs font-bold text-gray-700">
-        FOLLOWING
-      </p>
+      {showFollow &&
+        (isFollow ? (
+          <p
+            className="ml-auto cursor-pointer text-xs font-bold text-gray-700"
+            onClick={followClickHandler}
+          >
+            FOLLOWING
+          </p>
+        ) : (
+          <p
+            className="ml-auto cursor-pointer text-xs font-bold text-blue-400"
+            onClick={followClickHandler}
+          >
+            FOLLOW
+          </p>
+        ))}
     </div>
   );
 };

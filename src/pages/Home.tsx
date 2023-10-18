@@ -19,6 +19,9 @@ const Home: React.FC = () => {
               account={'abc123'}
               location={'Hsinchu'}
               avatar={'/images/avatars/a2.png'}
+              size="small"
+              showFollow
+              isFollow
             />
           </div>
         </div>
