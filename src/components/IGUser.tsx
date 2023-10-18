@@ -1,5 +1,5 @@
 type IGUserProps = {
-  id: string;
+  id?: string;
   account: string;
   location: string;
   avatar: string;
@@ -18,10 +18,11 @@ const IGUser: React.FC<IGUserProps> = ({
   isFollow = false
 }) => {
   function followClickHandler() {
+    console.log('id:', id);
     console.log('click follow');
   }
   return (
-    <div className="flex h-[40px] items-center px-4">
+    <div className="flex h-[70px] items-center px-4">
       <div
         className={`${
           size === 'small' ? 'h-[40px] w-[40px]' : 'h-[60px] w-[60px]'
