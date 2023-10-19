@@ -47,9 +47,8 @@ const IGProfile: React.FC = () => {
       {friends.map(item => {
         const { id, account, location, avatar, isFollowing } = item;
         return (
-          <div className="-mt-2">
+          <div key={id} className="-mt-2">
             <IGUser
-              key={id}
               id={id}
               account={account}
               location={location}
