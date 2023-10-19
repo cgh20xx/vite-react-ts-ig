@@ -2,7 +2,7 @@ import IGContainer from 'components/IGContainer';
 import IGHeader from 'components/IGHeader';
 import IGPost from 'components/IGPost';
 import IGStory from 'components/IGStory';
-import IGUser from 'components/IGUser';
+import IGProfile from 'components/IGProfile';
 import db from '../../mock/db.json';
 
 const IGPostList: React.FC = () => {
@@ -50,15 +50,7 @@ const Home: React.FC = () => {
             <IGPostList />
           </div>
           <div className="hidden w-[424px] lg:block">
-            <IGUser
-              id={'123'}
-              account={'abc123'}
-              location={'Hsinchu'}
-              avatar={'/images/avatars/a2.png'}
-              size="small"
-              showFollow
-              isFollow
-            />
+            <IGProfile />
           </div>
         </div>
       </IGContainer>
