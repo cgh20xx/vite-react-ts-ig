@@ -12,7 +12,7 @@ export const homeApi = createApi({
   reducerPath: 'homeApi',
   baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3004/' }),
   endpoints: builder => ({
-    getIGStoies: builder.query<IGStory[], string | 'all'>({
+    getIGStories: builder.query<IGStory[], string | 'all'>({
       query: id => {
         if (id === 'all') {
           return `stories/`;
@@ -25,4 +25,4 @@ export const homeApi = createApi({
 
 // Export hooks for usage in functional components, which are
 // auto-generated based on the defined endpoints
-export const { useGetIGStoiesQuery } = homeApi;
+export const { useGetIGStoriesQuery } = homeApi;
