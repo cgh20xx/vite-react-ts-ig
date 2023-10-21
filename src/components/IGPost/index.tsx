@@ -23,7 +23,7 @@ const IGPost: React.FC<IGPostProps> = ({
   createTime
 }) => {
   return (
-    <div className="pb-4 shadow-md lg:mb-8">
+    <div className="mb-4 pb-4 shadow-md lg:mb-8">
       <IGUser account={account} location={location} avatar={avatar} />
       <img src={photo} />
       <Comment
