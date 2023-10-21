@@ -8,6 +8,18 @@ type IGStory = {
   avatar: string;
 };
 
+type IGPost = {
+  id: string;
+  location: string;
+  account: string;
+  avatar: string;
+  photo: string;
+  likes: number;
+  description: string;
+  hashTags: string;
+  createTime: string;
+};
+
 export const homeApi = createApi({
   reducerPath: 'homeApi',
   baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3004/' }),
@@ -22,7 +34,7 @@ export const homeApi = createApi({
       }
     }),
     // 取得動態牆
-    getIGPosts: builder.query({
+    getIGPosts: builder.query<IGPost[], string>({
       query: id => {
         if (id === 'all') {
           return `posts/`;
