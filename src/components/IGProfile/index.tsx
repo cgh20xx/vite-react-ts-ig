@@ -1,37 +1,10 @@
 import IGUser from 'components/IGUser';
+import { useAppSelector } from 'hooks';
 
 const IGProfile: React.FC = () => {
-  // 好友列表：暫用 mock data 之後會打 API 取代。
-  const friends = [
-    {
-      id: '1',
-      location: 'Taiwan',
-      account: 'max_123',
-      isFollowing: false,
-      avatar: '/images/avatars/a4.png'
-    },
-    {
-      id: '2',
-      location: 'Taiwan',
-      account: 'fm_457',
-      isFollowing: false,
-      avatar: '/images/avatars/a5.png'
-    },
-    {
-      id: '3',
-      location: 'Taiwan',
-      account: 'joanne_987',
-      isFollowing: true,
-      avatar: '/images/avatars/a6.png'
-    },
-    {
-      id: '4',
-      location: 'Taipei',
-      account: 'focus_999',
-      isFollowing: true,
-      avatar: '/images/avatars/a4.png'
-    }
-  ];
+  // 好友列表：使用 useAppSelector 取得 store 裡的資料
+  const friendReducer = useAppSelector(state => state.friendReducer);
+  const friends = friendReducer.friends.slice(0, 5); // 取前 5 筆資料
 
   return (
     <div className="ml-8 mt-8 p-2">
