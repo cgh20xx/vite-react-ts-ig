@@ -1,3 +1,6 @@
+import { useAppDispath } from 'hooks';
+import { follow, unFollow } from 'slices/friendSlice';
+
 type IGUserProps = {
   id?: string;
   account: string;
@@ -17,9 +20,16 @@ const IGUser: React.FC<IGUserProps> = ({
   showFollow = false,
   isFollow = false
 }) => {
+  const dispatch = useAppDispath();
+
   function followClickHandler() {
-    console.log('id:', id);
-    console.log('click follow');
+    console.log('click follow id:', id);
+    if (id === undefined) return;
+    if (isFollow) {
+      dispatch(unFollow(id));
+    } else {
+      dispatch(follow(id));
+    }
   }
   return (
     <div className="flex h-[70px] items-center px-4">
