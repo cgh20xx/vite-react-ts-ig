@@ -12,7 +12,7 @@ const IGProfile: React.FC = () => {
         account={'Hank'}
         location={'Hsinchu'}
         avatar={'/images/avatar.png'}
-        size="midium"
+        size="medium"
       />
       <p className="mx4 mb-3 mt-4 text-sm font-bold text-gray-400">
         You are following
